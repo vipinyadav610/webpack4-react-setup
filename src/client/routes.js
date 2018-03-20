@@ -1,20 +1,20 @@
-import Home from "./components/Home";
-import NotFound from "./components/NotFound";
+import Home from './components/Home'
+import NotFound from './components/NotFound'
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     exact: true,
     component: Home
   },
   {
-    path: "/home",
+    path: '/home',
     component: Home
   },
   {
-    path: "*",
+    path: '*',
     component: NotFound
   }
-];
+]
 
-export default routes;
+export default routes

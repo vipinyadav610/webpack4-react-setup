@@ -5,10 +5,10 @@
     "quotes": [2, "single"],
     "semi": [2, "never"],
     "require-await": 2,
-    "no-unused-vars": 2,
-    "no-undef": 2,
+    "no-unused-vars": 1,
+    "no-undef": 0,
     "for-direction": 2,
-    "no-console": 1,
+    "no-console": 0,
     "no-debugger": 1,
     "no-dupe-args": 2,
     "no-dupe-keys": 2,
@@ -31,7 +31,8 @@
     "no-unsafe-negation": 2,
     "use-isnan": 2,
     "valid-jsdoc": 2,
-    "valid-typeof": 2
+    "valid-typeof": 2,
+    "no-unreachable": 0
   },
-  "extends": "eslint:recommended"
+  "extends": ["plugin:react/recommended", "eslint:recommended"]
 }
