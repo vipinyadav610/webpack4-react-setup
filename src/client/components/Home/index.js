@@ -1,7 +1,8 @@
 import React from 'react'
-// import { connect } from 'react-redux'
-// import * as Actions from '../../redux/actions/posts'
-// @connect(state => ({}), Actions)
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import * as Actions from '../../redux/actions/posts'
+@connect(state => ({}), Actions)
 class Home extends React.Component {
   render() {
     return (
@@ -11,5 +12,7 @@ class Home extends React.Component {
     )
   }
 }
-
+Home.propTypes = {
+  getApiData: PropTypes.func
+}
 export default Home
