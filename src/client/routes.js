@@ -1,5 +1,6 @@
 import Home from './components/Home'
 import NotFound from './components/NotFound'
+import SimpleForm from './components/SignUp'
 
 const routes = [
   {
@@ -10,6 +11,10 @@ const routes = [
   {
     path: '/home',
     component: Home
+  },
+  {
+    path: '/signup',
+    component: SimpleForm
   },
   {
     path: '*',

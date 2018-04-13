@@ -25,8 +25,8 @@ module.exports = {
     // host: "0.0.0.0",
     port: 3000,
     hot: true,
-    https: true
-    // open: true
+    https: true,
+    open: true
     // progress: true
     // watchContentBase: true
   }
