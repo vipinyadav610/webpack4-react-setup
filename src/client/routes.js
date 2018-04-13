@@ -1,12 +1,14 @@
 import Home from './components/Home'
 import NotFound from './components/NotFound'
 import SimpleForm from './components/SignUp'
+import ProtectedRoute from './hoc/auth'
 
 const routes = [
   {
     path: '/',
     exact: true,
-    component: Home
+    allowed: ['manager', 'admin'],
+    component: ProtectedRoute(Home)
   },
   {
     path: '/home',

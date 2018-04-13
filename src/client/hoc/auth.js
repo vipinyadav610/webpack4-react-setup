@@ -4,27 +4,40 @@ import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 export default ProtectedRoute => {
-  @connect(state => ({
-    authenticated: state.auth.authenticated
-  }))
-  @withRouter
   class AuthHOC extends Component {
-    componentWillMount() {
-      if (!this.props.authenticated) {
-        this.props.history.push('/login')
-      }
-    }
+    // componentWillMount() {
+    //   if (!this.props.authenticated) {
+    //     this.props.history.push('/login')
+    //   }
+    // }
 
-    componentWillUpdate(nextProps) {
-      if (!nextProps.authenticated) {
-        this.props.history.push('/login')
-      }
-    }
+    // componentWillUpdate(nextProps) {
+    //   if (!nextProps.authenticated) {
+    //     this.props.history.push('/login')
+    //   }
+    // }
 
     render() {
-      return <ProtectedRoute {...this.props} />
+      // if (
+      //   localStorage.getItem('role') &&
+      //   this.props.route.allowed &&
+      //   this.props.route.allowed.includes(localStorage.getItem('role'))
+      // ) {
+        return <ProtectedRoute {...this.props} />
+      // } else {
+      //   return <div>you are no allowed for this route</div>
+      // }
     }
   }
+  AuthHOC.propTypes = {
+    authenticated: PropTypes.bool,
+    history: PropTypes.object,
+    route: PropTypes.object
+  }
   AuthHOC.contextTypes = { router: PropTypes.object.isRequired }
-  return AuthHOC
+  return withRouter(
+    connect(state => ({
+      // authenticated: state
+    }))(AuthHOC)
+  )
 }
