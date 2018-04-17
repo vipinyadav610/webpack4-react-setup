@@ -1,7 +1,15 @@
-import Home from './components/Home'
-import NotFound from './components/NotFound'
-import SimpleForm from './components/SignUp'
+import asyncComponent from './hoc/asyncRender'
 import ProtectedRoute from './hoc/auth'
+
+const Home = asyncComponent(() =>
+  import('./components/Home').then(module => module.default)
+)
+const NotFound = asyncComponent(() =>
+  import('./components/NotFound').then(module => module.default)
+)
+const SimpleForm = asyncComponent(() =>
+  import('./components/SignUp').then(module => module.default)
+)
 
 const routes = [
   {
