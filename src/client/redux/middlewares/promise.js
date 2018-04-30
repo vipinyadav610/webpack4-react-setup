@@ -10,8 +10,9 @@ const promiseMiddleware = () => {
     const FAILURE = type + '_FAILURE'
     next({ ...rest, type: REQUEST })
     return promise
+      .then(response => response.json())
       .then(response => {
-        next({ ...rest, response: response.data, type: SUCCESS })
+        next({ ...rest, response: response, type: SUCCESS })
         return true
         if (token) {
           const secure = window.location.protocol === 'https'
