@@ -3,8 +3,13 @@ import { storiesOf } from '@storybook/react'
 import Provider from './Provider'
 import NotFound from '../client/components/NotFound'
 import Home from '../client/components/Home'
-storiesOf('Welcome', module).add('to Storybook', () => <NotFound />)
+import SimpleForm from '../client/components/SignUp'
+storiesOf('Welcome', module).add('not found', () => <NotFound />)
 
-storiesOf('Signup form', module)
+storiesOf('home', module)
   .addDecorator(story => <Provider story={story()} />)
-  .add('empty form', () => <Home />)
+  .add('home', () => <Home />)
+
+storiesOf('Sign Up', module)
+  .addDecorator(story => <Provider story={story()} />)
+  .add('signup', () => <SimpleForm />)
