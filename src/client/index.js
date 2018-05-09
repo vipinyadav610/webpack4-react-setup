@@ -18,7 +18,7 @@ const client = new ApolloClient({
 })
 
 render(
-  <ApolloProvider store={store} client={client}>
+  <ApolloProvider client={client}>
     <Provider store={store}>
       <BrowserRouter>{renderRoutes(routes)}</BrowserRouter>
     </Provider>
