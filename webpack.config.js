@@ -24,9 +24,9 @@ module.exports = {
     historyApiFallback: true,
     // host: "0.0.0.0",
     port: 3000,
-    hot: true,
-    https: true,
-    open: true
+    hot: true
+    // https: true,
+    // open: true
     // progress: true
     // watchContentBase: true
   }
