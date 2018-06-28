@@ -66,6 +66,7 @@
     "apollo-client": "^2.2.8",
     "apollo-link-http": "^1.5.4",
     "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
     "js-cookies": "^1.0.4",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",

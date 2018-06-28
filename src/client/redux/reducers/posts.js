@@ -4,7 +4,7 @@ import {
   GET_POSTS_FAILURE
 } from '../constants'
 export default function posts(
-  state = (state = { isFetching: false, posts: [], error: null }),
+  state = { isFetching: false, posts: [], error: null },
   action
 ) {
   switch (action.type) {
