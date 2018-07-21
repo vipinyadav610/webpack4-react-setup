@@ -5,11 +5,7 @@ import * as Actions from '../../redux/actions/posts'
 
 const Pres = props => {
   console.log('props', props.storeValue)
-  return (
-    <div onClick={props.pm.onButtonClick}>
-      dfhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-    </div>
-  )
+  return <div>presenter</div>
 }
 
-export default presenter(Presenter, Pres, Actions)
+export default presenter(Presenter, Pres)
