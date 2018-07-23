@@ -6,13 +6,13 @@ import { Query, ApolloConsumer } from 'react-apollo'
 import gql from 'graphql-tag'
 
 @connect(state => ({}), Actions)
-// @graphql(query, {
-//   options: ownProps => ({
-//     variables: {
-//       itemId: 1
-//     }
-//   })
-// })
+@graphql(query, {
+  options: ownProps => ({
+    variables: {
+      itemId: 1
+    }
+  })
+})
 class Home extends React.Component {
   query = () => {
     return gql`

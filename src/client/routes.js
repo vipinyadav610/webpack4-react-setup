@@ -12,16 +12,16 @@ const SimpleForm = asyncComponent(() =>
 )
 
 const routes = [
-  {
-    path: '/',
-    exact: true,
-    allowed: ['manager', 'admin'],
-    component: ProtectedRoute(Home)
-  },
-  {
-    path: '/home',
-    component: Home
-  },
+  // {
+  //   path: '/',
+  //   exact: true,
+  //   allowed: ['manager', 'admin'],
+  //   component: ProtectedRoute(Home)
+  // },
+  // {
+  //   path: '/home',
+  //   component: Home
+  // },
   {
     path: '/signup',
     component: SimpleForm
