@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "precommit": "npm run lint",
+    "precommit": "lint-staged",
+    "format": "prettier-standard --log-level=info 'src/client/**/!(*.test).{js,jsx}'",
     "start":
       "webpack-dev-server --config ./webpack.config.js --mode development",
     "build":
@@ -22,14 +23,13 @@
     "url": "git+https://github.com/vipinyadav610/webpack4-react-setup.git"
   },
   "lint-staged": {
-    "verbose": false,
-    "linters": {
+    
       "src/client/**/!(*.test).{js,jsx}": [
         "prettier-standard",
         "eslint --fix",
         "git add"
       ]
-    }
+    
   },
   "jest": {
     "transform": {
